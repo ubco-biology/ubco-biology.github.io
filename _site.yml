@@ -1,0 +1,9 @@
+name: "UBCO Biology Undergraduate Resources"
+output_dir: "./docs"
+
+output:
+  html_document:
+    theme: flatly
+    highlight: textmate
+    css: styles.css
+exclude: ["*.ini", "*.txt", "*.html"]

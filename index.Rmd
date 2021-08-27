@@ -1,0 +1,56 @@
+---
+Title: "UBCO Biology Undergraduate Resources"
+pagetitle: "UBCO Biology Undergraduate Resources"
+output:
+  html_document:
+    includes:
+      in_header: header.html
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE
+)
+```
+
+# UBCO Biology Undergraduate Resources
+
+<br /><br />
+
+```{r}
+resources.biol <- read.csv("./files/resources.csv",
+                           header = T)
+
+resources.labmanuals <- subset(resources.biol,
+                               Type == "Lab-Manual",
+                               select = c(Title, Link))
+
+resources.resource <- subset(resources.biol,
+                             Type == "Resource",
+                             select = c(Title, Link))
+```
+
+## Lab Manuals
+
+```{r, results='asis'}
+for (record in 1:nrow(resources.labmanuals)) {
+  title <- resources.labmanuals[record,1]
+  link <- resources.labmanuals[record,2]
+  
+  cat('<a href="',link,'" target="_blank"><div class="labManual">',title,'</div></a>')
+}
+```
+
+<br /><br />
+
+## Other Resources
+
+```{r, results='asis'}
+for (record in 1:nrow(resources.resource)) {
+  title <- resources.resource[record,1]
+  link <- resources.resource[record,2]
+  
+  cat('<a href="',link,'" target="_blank"><div class="otherResource">',title,'</div></a>')
+}
+```
