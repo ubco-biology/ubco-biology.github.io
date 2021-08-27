@@ -19,6 +19,9 @@
 
 #BannerContainer {
   background-color: #fff;
+  position: relative;
+  text-align: center;
+  color: white;
 }
 
 #banner {
@@ -29,6 +32,17 @@
   padding: 0px 0px 20px 0px;
 }
 
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 a:link, a:visited, a:hover, a:active {
   color: #000000 !important;
+}
+
+h1 {
+  font-weight: bold;
 }
