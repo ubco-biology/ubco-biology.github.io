@@ -38,7 +38,7 @@ for (record in 1:nrow(resources.labmanuals)) {
   title <- resources.labmanuals[record,1]
   link <- resources.labmanuals[record,2]
   
-  cat('<a href="',link,'" target="_blank"><div class="labManual">',title,'</div></a>')
+  cat('<a href="',link,'" target="_blank"><div class="labManual resource">',title,'</div></a>')
 }
 ```
 
@@ -51,6 +51,6 @@ for (record in 1:nrow(resources.resource)) {
   title <- resources.resource[record,1]
   link <- resources.resource[record,2]
   
-  cat('<a href="',link,'" target="_blank"><div class="otherResource">',title,'</div></a>')
+  cat('<a href="',link,'" target="_blank"><div class="otherResource resource">',title,'</div></a>')
 }
 ```
