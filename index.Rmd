@@ -28,7 +28,7 @@ resources.resource <- subset(resources.biol,
                              select = c(Title, Link))
 ```
 
-## Lab Manuals
+## Lab Manuals & Tutorials
 
 ```{r, results='asis'}
 for (record in 1:nrow(resources.labmanuals)) {
