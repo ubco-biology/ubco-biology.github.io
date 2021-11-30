@@ -22,6 +22,7 @@ resources.biol <- read.csv("./files/resources.csv",
 resources.labmanuals <- subset(resources.biol,
                                Type == "Lab-Manual",
                                select = c(Title, Link))
+resources.labmanuals <- resources.labmanuals[ order(resources.labmanuals[,1]),]
 
 resources.resource <- subset(resources.biol,
                              Type == "Resource",
