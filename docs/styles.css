@@ -46,3 +46,7 @@ a:link, a:visited, a:hover, a:active {
 h1 {
   font-weight: bold;
 }
+
+.level2 {
+  overflow: hidden;
+}

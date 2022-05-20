@@ -16,14 +16,17 @@ knitr::opts_chunk$set(
 
 
 ```{r}
+# read in the data
 resources.biol <- read.csv("./files/resources.csv",
                            header = T)
 
+# isolate lab manual content and order it
 resources.labmanuals <- subset(resources.biol,
                                Type == "Lab-Manual",
                                select = c(Title, Link))
 resources.labmanuals <- resources.labmanuals[ order(resources.labmanuals[,1]),]
 
+# isolate non-lab manual resources
 resources.resource <- subset(resources.biol,
                              Type == "Resource",
                              select = c(Title, Link))
@@ -32,6 +35,8 @@ resources.resource <- subset(resources.biol,
 ## Lab Manuals & Tutorials
 
 ```{r, results='asis'}
+# list and format the lab manuals
+
 for (record in 1:nrow(resources.labmanuals)) {
   title <- resources.labmanuals[record,1]
   link <- resources.labmanuals[record,2]
@@ -45,6 +50,8 @@ for (record in 1:nrow(resources.labmanuals)) {
 ## Other Resources
 
 ```{r, results='asis'}
+# list and format the other resources
+
 for (record in 1:nrow(resources.resource)) {
   title <- resources.resource[record,1]
   link <- resources.resource[record,2]
