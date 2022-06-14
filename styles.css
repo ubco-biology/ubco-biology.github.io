@@ -7,14 +7,24 @@
   overflow: hidden;
 }
 
-.labManual {
-  border: 1px solid #0d4a7b;
-  background: #f0f7fd;
+.labManual, .otherResource {
+  border-left: 7px solid;
 }
 
 .otherResource {
-  border: 1px solid #1f7b0d;
-  background-color: #f1fdf0;
+  border-color: #7A4B0E;
+  background-color: #FFF2DF;
+}
+
+
+.year1 {
+  border-color: #520E7A;
+  background-color: #EFE4F5;
+}
+
+.year2 {
+  border-color: #0D4A7B;
+  background-color: #F0F7FD;
 }
 
 #BannerContainer {
