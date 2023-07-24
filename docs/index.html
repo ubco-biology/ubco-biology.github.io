@@ -13,7 +13,7 @@
 
 <title>UBCO Biology Undergraduate Resources</title>
 
-<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
@@ -110,8 +110,8 @@ pre code {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -119,16 +119,9 @@ pre code {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -179,25 +172,9 @@ pre code {
 
 <div id="lab-manuals-tutorials" class="section level2">
 <h2>Lab Manuals &amp; Tutorials</h2>
-<a href=" https://ubco-biology.github.io/BIOL-116-Lab-Manual/ " target="_blank">
-<div class="labManual resource year1">
-BIOL 116 Lab Manual
-</div>
-</a><a href=" https://ubco-biology.github.io/BIOL-125-Lab-Manual-Summer/ " target="_blank">
-<div class="labManual resource year1">
-BIOL 125 Lab Manual - Summer
-</div>
-</a><a href=" https://ubco-biology.github.io/BIOL-125-Lab-Manual/ " target="_blank">
-<div class="labManual resource year1">
-BIOL 125 Lab Manual - Winter
-</div>
-</a><a href=" https://ubco-biology.github.io/BIOL202/ " target="_blank">
+<a href=" https://ubco-biology.github.io/BIOL202/ " target="_blank">
 <div class="labManual resource year2">
 BIOL 202 Tutorials
-</div>
-</a><a href=" https://ubco-biology.github.io/BIOL-205-Lab-Manual/ " target="_blank">
-<div class="labManual resource year2">
-BIOL 205 Lab Manual
 </div>
 <p></a></p>
 <p><br /><br /></p>
